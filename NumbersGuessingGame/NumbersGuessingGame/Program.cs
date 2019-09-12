@@ -27,11 +27,23 @@ namespace NumbersGuessingGame
             int secretNumber = random.Next(0, max);
 
             int userInput = GetIntegerFromUser($"Great lets get started, pick a number between 1 and {max}");
-
+            int guess;
             do
             {
-                GetIntegerFromUser == secretNumber
-            } while (true);
+                guess = GetIntegerFromUser("What is your guess?");
+             if( guess < secretNumber)
+                {
+                    Console.WriteLine("Too Low!");
+                }
+             if(guess > secretNumber)
+                {
+                    Console.WriteLine("Too High!");
+                }
+             else
+                {
+                    Console.WriteLine("Congratulations you guessed right!");
+                }
+            } while (guess != secretNumber);
 
             
 
