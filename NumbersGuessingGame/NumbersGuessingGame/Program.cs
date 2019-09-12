@@ -21,7 +21,7 @@ namespace NumbersGuessingGame
         static void Main(string[] args)
         {
             Console.WriteLine("Let's play a guessing game! The higher your score, the worse you did!");
-            int max = GetIntegerFromUser("First start by picking a number range you want to guess from");
+            int max = GetIntegerFromUser("First start by picking a MAX number, for example, 10, 100, 50...etc ");
       
             Random random= new Random();
             int secretNumber = random.Next(1, max);
