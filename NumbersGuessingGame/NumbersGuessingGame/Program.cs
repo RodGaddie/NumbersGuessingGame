@@ -24,9 +24,14 @@ namespace NumbersGuessingGame
             int max = GetIntegerFromUser("First start by picking a range you want to guess from");
       
             Random random= new Random();
-            int secrestNumber = random.Next(0, max);
+            int secretNumber = random.Next(0, max);
 
             int userInput = GetIntegerFromUser($"Great lets get started, pick a number between 1 and {max}");
+
+            do
+            {
+                GetIntegerFromUser == secretNumber
+            } while (true);
 
             
 
