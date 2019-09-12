@@ -26,27 +26,29 @@ namespace NumbersGuessingGame
             Random random= new Random();
             int secretNumber = random.Next(0, max);
 
-            int userInput = GetIntegerFromUser($"Great lets get started, pick a number between 1 and {max}");
+            Console.WriteLine($"Great lets get started, pick a number between 1 and {max}");
             int guess;
+            int sum = 1;
             do
             {
                 guess = GetIntegerFromUser("What is your guess?");
-             if( guess < secretNumber)
+                if (guess < secretNumber)
                 {
                     Console.WriteLine("Too Low!");
                 }
-             if(guess > secretNumber)
+                if (guess > secretNumber)
                 {
                     Console.WriteLine("Too High!");
                 }
-             else
+                if (guess == secretNumber)
                 {
-                    Console.WriteLine("Congratulations you guessed right!");
+                    Console.WriteLine($"Congratulations you guessed right!!  Your score is {sum}");
                 }
+                sum++;
             } while (guess != secretNumber);
 
             
-
+             
         }
     }
 }
