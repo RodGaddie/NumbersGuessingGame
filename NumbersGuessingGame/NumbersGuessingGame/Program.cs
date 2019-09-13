@@ -28,7 +28,7 @@ namespace NumbersGuessingGame
 
             Console.WriteLine($"Great lets get started, pick a number between 1 and {max}");
             int guess;
-            int sum = 1;
+             int sum = 1;
             do
             {
                 guess = GetIntegerFromUser("What is your guess?");
